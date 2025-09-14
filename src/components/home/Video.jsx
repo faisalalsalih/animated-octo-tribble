@@ -1,11 +1,15 @@
 import React from 'react'
+import video from '../../assets/videos/video.mp4'
 
-const Video = () => {
+const Video = ({rounded = false}) => {
   return (
     <>
-      <video src='https://download-video-ak.vimeocdn.com/v3-1/playback/a278bb9c-996c-4760-8ca1-dd0abff308f7/83c745cf?__token__=st=1757779370~exp=1757782970~acl=%2Fv3-1%2Fplayback%2Fa278bb9c-996c-4760-8ca1-dd0abff308f7%2F83c745cf%2A~hmac=9835213a4452abda215c74c49db06dcb578ec24570f88bf0c535ef9edffa4ce2&r=dXMtd2VzdDE%3D'
-      autoPlay muted loop className='w-full h-full object-cover'>
+    <div className='h-full w-full'>
+      <video 
+      autoPlay muted loop className={`w-full h-full object-cover ${rounded ? 'rounded-full': ''}`}>
+        <source src={video} type="video/mp4"/>
       </video>
+      </div>
     </>
   )
 }
