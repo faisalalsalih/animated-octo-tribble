@@ -6,6 +6,7 @@ import Projects from './pages/Projects'
 
 
 const App = () => {
+  
   return (
     <>
       <Routes>
